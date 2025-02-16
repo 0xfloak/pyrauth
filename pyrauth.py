@@ -1,7 +1,9 @@
-import pyotp
-import qrcode
 import io
 import argparse
+
+import pyotp
+import qrcode
+from qrcode.image.pure import PyPNGImage
 
 
 def main(name, image_out):
@@ -17,6 +19,10 @@ def main(name, image_out):
     qr.print_ascii(out=f)
     f.seek(0)
     print(f.read())
+
+    if image_out:
+        qrcode.make(uri, image_factory=PyPNGImage).save(image_out)
+        print(f"Saved to {image_out}")
 
 
 def parseargs():
@@ -49,4 +55,6 @@ def banner():
 if __name__ == "__main__":
     args = parseargs()
     banner()
-    main(args.name, args.output_file)
+
+    out_file = args.output_file.name if args.output_file else None
+    main(args.name, out_file)
