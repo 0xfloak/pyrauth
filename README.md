@@ -1,3 +1,5 @@
+# PYRauth
+
 A simple way to exchange TOTP codes with people.
 
 Inspired by [PeerAuth](https://ksze.github.io/PeerAuth/)
