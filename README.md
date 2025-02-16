@@ -2,6 +2,14 @@ A simple way to exchange TOTP codes with people.
 
 Inspired by [PeerAuth](https://ksze.github.io/PeerAuth/)
 
+## Motivation
+
+Digital impersonation, in particular using deepfakes, is [on](https://www.dhs.gov/sites/default/files/publications/increasing_threats_of_deepfake_identities_0.pdf)
+[the](https://www.jpmorgan.com/insights/fraud/fraud-protection/ai-scams-deep-fakes-impersonations-oh-my)
+[rise](https://www.forbes.com/sites/bernardmarr/2024/11/06/the-dark-side-of-ai-how-deepfakes-and-disinformation-are-becoming-a-billion-dollar-business-risk/). While using shared context like memories can often suffice to verify identity, this method is vulnerable to replay attacks and leaks personal information to attackers.
+
+Many people use authenticator apps for MFA in their day-to-day lives, so adding keys for contacts is as simple as scanning a QR code.
+
 ## Usage
 
 1. Download and install requirements:
